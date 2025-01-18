@@ -1,0 +1,352 @@
+/* cores */
+.principal {
+    color: #E5DA4A;
+}
+
+.secundaria {
+    color: #594A44;
+}
+
+.backgroud {
+    color: #bbdcf6;
+}
+
+html {
+    background-color: #e1edf6;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #594A44;
+}
+
+.marca {
+    font-family: "Bevan", serif;
+}
+main{
+    padding: 4rem;
+}
+/* header e barra de navegação */
+nav div {
+    display: flex;
+    justify-content: left;
+    color: #594A44;
+    padding-right: 4rem;
+}
+
+nav h1 {
+    font-family: "Bevan", sans-serif;
+    align-self: center;
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+#logo-header {
+    align-self: center;
+    width: 85px;
+    height: 85px;
+    margin-right: 0rem;
+}
+
+nav {
+    height:5.5rem;
+    align-self: center;
+    position: fixed;
+    top: 0px;
+    width: 99%;
+    background-color: #E5DA4A;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 2;
+}
+
+nav a {
+    align-self: center;
+    color: #594A44;
+    font-weight: bold;
+    padding: 0.2em;
+    text-decoration: none;
+    cursor: pointer;
+    padding-top: 1rem;
+}
+
+nav a:hover {
+    color: #594a44a3;
+}
+#links{
+    width:40%;
+    justify-content: space-evenly;
+}
+
+/* Botao */
+#pedido {
+    position: fixed;
+    width: 18rem;
+    height: 4rem;
+    right: 2rem;
+    bottom: 6rem;
+    border-radius: 1rem;
+    border-color: #d34343;
+    background-color: #E5DA4A;
+    border-width: 0.7rem;
+    font-family: "Arvo", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4d3c35;
+    z-index:7
+}
+
+#pedido:hover {
+    background-color: #d5c814;
+}
+
+/* Sessões de Bombons e Gelatos */
+.ancora {
+    height: 10vh;
+}
+
+.bombonsgelatos h2 {
+    font-family: "Arvo";
+    font-weight: 700;
+    font-size: 2.5em;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.bombonsgelatos {
+    margin: auto;
+    height: fit-content;
+    width: 95%;
+    background-color: #d1e4f2;
+    border-radius: 0.5em;
+    padding-bottom: 2rem;
+}
+
+.bombonsgelatos h3 {
+    padding: 0%;
+    padding-left: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    font-family: "Bevan", serif;
+}
+
+.bombonsgelatos li {
+    font-size: 1rem;
+    font-family: "Arvo", serif;
+    font-weight: bold;
+    padding: 0.7rem;
+}
+
+#Gelatos, #Bombons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Gelatosdiv, .Bombonsdiv {
+    padding: 1rem;
+    width: 40%;
+    background-color: #ede351b6;
+    border-radius: 0.7rem;
+    display: flex;
+    justify-content: center;
+    height: 22rem;
+}
+
+.preco {
+    display: flex;
+    color: #e1edf6;
+    z-index: 1;
+    background-color: #d34343;
+    border-radius: 0.7rem;
+    margin-top: 3rem;
+    height: 3rem;
+    width: 9rem;
+    font-size: 1.7rem;
+    justify-content: center;
+    font-weight: 650;
+    align-items: center;
+    margin-left: 2rem;
+    position: absolute;
+}
+
+/* carrossel de fotos */
+#divcarrossel {
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    overflow: hidden;
+}
+
+#fotobombo {
+    align-self: center;
+    width: 100%;
+    border-radius: 0.7rem;
+    display: block;
+}
+
+.bcarrossel {
+    background-color: #ede35100;
+    border: none;
+    font-size: 2rem;
+    height: 3rem;
+    color: #594A44;
+    cursor: pointer;
+    padding: 0.7rem;
+}
+
+.bcarrossel:hover {
+    color: #594a4495;
+}
+
+.imagens, .imagensG {
+    display: flex;
+    transition: transform 0.5s ease;
+    box-sizing: border-box;
+}
+
+.imagemdiv, .imagemdivG {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+#teste{
+    overflow: hidden;
+}
+/* Encomendas */
+#encomendas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.quadro {
+    background-color: #d1e4f2;
+    width: 45%;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.quadro article {
+    padding: 2rem;
+}
+
+.encomendas h2 {
+    font-family: "Arvo", serif;
+    font-size: 2.5rem;
+    margin-left: 3%;
+}
+
+.encomendas h3 {
+    font-family: "Bevan", serif;
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 0%;
+}
+
+.encomendas h4 {
+    color: #d34343;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    margin: 0%;
+    font-family: "Arvo", serif;
+}
+
+.encomendas li {
+    font-family: "Arvo", serif;
+    font-size: 1rem;
+    padding-bottom: 0.4rem;
+}
+.encomendas p{
+    padding:1rem;
+    font-family: "Arvo",serif;
+    font-size: 1.2rem;
+    font-weight: 550;
+    background-color: #e5db4ada;
+    width: fit-content;
+    border-radius: 1rem;
+    margin: auto;
+    color: #4d3c35;
+}
+.encomendas{
+    display: flex;
+    flex-direction: column;
+    
+}
+/* Contatos */
+.contato h2 {
+    font-family: "Arvo", serif;
+    font-size: 2.5rem;
+    padding-left: 3%;
+}
+
+.contato div {
+    display: flex;
+    font-size: 1.5rem;
+    width: 30%;
+    margin-left: 3%;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+#icon {
+    font-size: 2.3rem;
+}
+#icon2{
+    font-size: 2rem;
+}
+
+.contato article {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contato a, .contato p {
+    font-family: "Bevan", serif;
+    color:#4d3c35;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+.contato a:hover{
+    color:#4d3c35ca;
+}
+/*rodape*/
+footer{
+    margin-top:2em;
+    height:7vh;
+    background-color:#E5DA4A;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+/*nos*/
+.nos article{
+    padding-left:2em;
+    font-size: 1.3em;
+    align-self: center;
+    font-family: "Arvo",serif;
+    text-align: justify;
+}
+.nos h2{
+    font-family: "Arvo", serif;
+    font-size: 2.5rem;
+    padding-left: 3%;
+}
+#divnos{
+    padding-left: 2em;
+    padding-right:2em;
+    display: flex;
+    flex-direction:row;
+}
+#fotocasal{
+    width:320px;
+    height: 320px;
+    border-radius: 2em;
+}
+

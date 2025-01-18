@@ -1,0 +1,178 @@
+@media (min-width:601px) and (max-width:900px) {
+    main{
+        padding:2.5rem
+    }
+    /*barra de navegação*/
+    #logo-header {
+        width:70px;
+        height:70px;
+        padding-left: 0rem;
+        margin-right:0rem;
+    }
+    nav h1{
+        font-size:1.2em;
+    }
+    nav a{
+        font-size:0.8em;
+        padding-top: 0.7rem;
+    }
+    nav div{
+        padding-right:0rem;
+    }
+    #mg {
+        margin:0.5rem;
+    }
+    nav{
+        height:4.5rem;
+    }
+    /* Botao */
+    #pedido {
+        width: 15rem;
+        height: 3rem;
+        border-width: 0.6rem;
+        font-size: 1.2rem;
+    }
+
+    .ancora {
+        height: 8vh;
+    }
+    .bombonsgelatos h2 {
+        font-size: 2em;
+    }
+    
+    .bombonsgelatos {
+        background-color: #d1e4f2;
+    }
+    
+    .bombonsgelatos h3 {
+        font-size: 1.2rem;
+        padding-left: 2.5rem;
+    }
+    
+    .bombonsgelatos li {
+        font-size: 1rem;
+        padding: 0.5rem;
+        padding-left:2.5rem
+    }
+    
+    #Gelatos, #Bombons {
+        flex-direction: column;
+    }
+    
+    .Gelatosdiv, .Bombonsdiv {
+        width: 85%;
+        height: fit-content;
+    }
+    #divcarrossel{
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        padding-top: 2rem;
+    }
+    #lista{
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        justify-content: left;
+    }
+    .preco{
+        margin-left:0.5rem
+    }
+    /* Encomendas */
+    #encomendas {
+        flex-direction: column;
+    }
+
+    .quadro {
+        width: 95%;
+        margin:auto;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .quadro article {
+        padding: 2rem;
+    }
+
+    .encomendas h2 {
+        font-size: 2rem;
+    }
+
+    .encomendas h3 {
+        font-size: 1.8rem;
+    }
+
+    .encomendas h4 {
+        font-size: 1rem;
+    }
+
+    .encomendas li {
+        font-size: 1rem;
+    }
+    .encomendas p{
+        padding:0.7rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+    /* Contatos */
+    .contato h2 {
+        font-size: 2rem;
+        padding-left: 3%;
+    }
+
+    .contato div {
+        display: flex;
+        font-size: 1rem;
+        width: 30%;
+        margin-left: 3%;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+
+
+    .contato article {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .contato a, .contato p {
+        font-family: "Bevan", serif;
+        color:#4d3c35;
+        text-decoration: none;
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+    .contato a:hover{
+        color:#4d3c35ca;
+    }
+    #icon {
+        font-size: 2rem;
+    }
+    #icon2{
+        font-size: 1.8;
+    }
+    /*rodape*/
+    footer{
+        margin-top:2em;
+        height:7vh;
+        background-color:#E5DA4A;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        
+    }
+    #divnos{
+        padding-left: 2em;
+        padding-right:2em;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+    }
+    #fotocasal{
+        margin: auto;
+    }
+    .nos article {
+        padding-top: 2em;
+        padding-left:0em;
+    }
+
+}

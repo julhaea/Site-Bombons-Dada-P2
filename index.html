@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/200bf88688.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Kameron:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/media.css">
+    <link rel="stylesheet" href="Style/mobile.css">
+    <title id="titulo">Bombons Dadá</title>
+    <link rel="icon" href="Imagens/icone2.webp">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="Imagens/icone2.webp" id="logo-header">
+                <h1>Bombons Dadá</h1>
+            </div>
+            <div id="links">
+                <a href="#bombom">Bombons</a>
+                <a href="#gelato">Gelatos</a>
+                <a href="#encomenda">Encomendas</a>
+                <a href="#contato" >Contato</a>
+                <a href="#nos" id="mg">Nós</a>
+            </div>
+        </nav>
+    </header>
+    <button id="pedido" onclick="window.location.href='https://wa.me/5531991353880';">FAÇA SEU PEDIDO</button>
+    <main>
+        <div class="ancora" id="bombom"></div>
+        <section class="bombonsgelatos">
+            <h2>Bombons</h2>
+            <p class="preco">R$4,00</p>
+            <div id="Bombons">
+                <div id="divcarrossel" class="Bombonsdiv">
+                    <button id="prev" class="bcarrossel" onclick="prevSlide()"><i class="fa-solid fa-angle-left"></i></button>
+                    <div id="teste">
+                        <div class="imagens">
+                            <div class="imagemdiv"><img src="Imagens/fotobombo.jpg" id="fotobombo"  alt="Bombon de ninho com geleia de morango partido ao meio"></div>
+                            <div class="imagemdiv"><img src="Imagens/fotobombo2.jpg" id="fotobombo"   alt="Bombon de prestígio partido ao meio"></div>
+                            <div class="imagemdiv"><img src="Imagens/fotobombo3.jpg" id="fotobombo"   alt="Bombon de maracujá partido ao meio"></div>
+                            <div class="imagemdiv"><img src="Imagens/fotobombo4.jpg" id="fotobombo"   alt="Bombon de brigadeiro com maracujá partido ao meio"></div>
+                            <div class="imagemdiv"><img src="Imagens/fotobombo5.jpg" id="fotobombo"   alt="Bombon de ovomaltine partido ao meio"></div>
+                        </div>
+                    </div>
+                    <button id="next" class="bcarrossel" onclick="nextSlide()"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <div class="Bombonsdiv" id="lista">
+                    <article>
+                        <h3>Sabores disponíveis para pronta-entrega</h3>
+                        <li>Ninho com Nutella</li>
+                        <li>Ninho com geleia de morango</li>
+                        <li>Prestígio</li>
+                        <li>Brigadeiro</li>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <div class="ancora" id="gelato"></div>
+        <section class="bombonsgelatos">
+            <h2>Gelatos</h2>
+            <p class="preco">R$6,00</p>
+            <div id="Gelatos">
+                <div class="Gelatosdiv" id="divcarrossel">
+                    <button id="prev" class="bcarrossel" onclick="prevSlideG()"><i class="fa-solid fa-angle-left"></i></button>
+                    <div id="teste">
+                        <div class="imagensG">
+                            <div class="imagemdivG"><img src="Imagens/fotogelato.jpg" id="fotobombo" alt="Gelatos de chocolate, ninho com geleia de maracujá, ninho com doce de leite, coco e oreo enfileirados"></div>
+                            <div class="imagemdivG"><img src="Imagens/fotogelato2.jpg" id="fotobombo" alt="Gelatos de ninho com geleia de maracujá e de chocolate"></div>
+                            <div class="imagemdivG"><img src="Imagens/fotogelato3.jpg" id="fotobombo" alt="Gelatos de chocolate e de oreo"></div>
+                            <div class="imagemdivG"><img src="Imagens/fotogelato4.jpg" id="fotobombo" alt="Gelatos de ninho com doce de leite e de coco"></div>
+                        </div>
+                    </div>
+                    <button id="next" class="bcarrossel" onclick="nextSlideG()"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <div class="Gelatosdiv" id="lista">
+                    <article>
+                        <h3>Sabores disponíveis para pronta-entrega</h3>
+                        <li>Ninho com Nutella</li>
+                        <li>Ninho com geleia de morango</li>
+                        <li>Ninho com geleia de maracujá</li>
+                        <li>Paçoca</li>
+                        <li>Chocolate</li>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <div class="ancora" id="encomenda"></div>
+        <section class="encomendas">
+            <h2>Encomendas</h2>
+            <div id="encomendas">
+                <div class="quadro">
+                    <article>
+                        <h3>Bombons</h3>
+                        <h4>R$3,50 acima de 50 unidades</h4>
+                        <li>Ninho com Nutella</li>
+                        <li>Ninho com geleia de morango</li>
+                        <li>Ninho</li>
+                        <li>Brigadeiro</li>
+                        <li>Prestígio</li>
+                        <li>Maracujá</li>
+                        <li>Brigadeiro com maracujá</li>
+                        <li>Brigadeiro com coco</li>
+                        <li>Paçoca</li>
+                        <li>Doce de leite</li>
+                        <li>Limão</li>
+                        <li>Oreo</li>
+                        <li>Kitkat</li>
+                        <li>Ovomaltine</li>
+                    </article>
+                </div>
+                <div class="quadro">
+                    <article id="encomendagelato">
+                        <h3>Gelatos</h4>
+                        <h4>R$5,50 acima de 30 unidades</h4>
+                        <li>Ninho com Nutella</li>
+                        <li>Ninho com geleia de morango</li>
+                        <li>Ninho com geleia de maracujá</li>
+                        <li>Ninho com doce de leite</li>
+                        <li>Ninho</li>
+                        <li>Paçoca</li>
+                        <li>Chocolate</li>
+                        <li>Nesquik</li>
+                        <li>Coco</li>
+                        <li>Abacate</li>
+                        <li>Limão</li>
+                        <li>Oreo</li>
+                        </article>
+                </div>
+            </div>
+            <p>Deseja revender nossos produtos? Entre em contato conosco, oferecemos condições especiais!</p>
+        </section>
+        <section class="contato">
+            <h2>Formas de contato</h2>
+            <article id="contato">
+                <div><i class="fa-brands fa-square-instagram" id="icon"></i><a href="https://www.instagram.com/bombonsdada?igsh=czczMGVsbzJ4MDhk">   Instagram</a></div>
+                <div><i class="fa-brands fa-square-whatsapp" id="icon"></i><a href="https://wa.me/5531991353880">   Whatsapp: (31) 991353880</a></div>
+                <div><i class="fa-solid fa-phone" id="icon2"></i><p id="ptel">Telefone: (31) 99135-3880</p></div>
+            </article>
+        </section>   
+        <section class="nos">
+            <h2>Sobre nós</h2>
+            <div id="divnos">
+                <img src="Imagens/fotocasal.jpeg" id="fotocasal">
+                <article id="nos"> Nós somos a Poliane e o Dalison, o casal por trás da <em class="marca">Bombons Dadá</em>. Em 2019, vimos na produção caseira de bombons uma oportunidade de renda extra para construirmos a nossa casa e nos casar, e em 2024 finalmente vamos realizar esse sonho. No ano passado expandimos nosso négocio, e agora além de bombons também produzimos gelatos.</article>
+            </div>
+        </section>  
+    <script src="carrossel.js"></script>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
