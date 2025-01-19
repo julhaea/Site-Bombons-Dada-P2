@@ -350,3 +350,73 @@ footer{
     border-radius: 2em;
 }
 
+
+
+
+/*Página de Produtos*/
+
+.divbombo img{
+    width: 80%;
+    border-radius: 10px;
+    border-color: #71baee;
+    border-style: solid;
+    border-width: 5px;
+
+}
+.divbombo p{
+    color: #594A44;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding:0%;
+    margin:0%;
+    text-align: center;
+
+}
+#nome{
+  height: 5vw;
+  align-items: center;
+  display:flex;
+  margin-top: 1vw;
+}
+.divbombo{
+    width:27%;
+    height: 25vw;
+    background-color: #d1e4f2;
+    border-radius: 20px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding:2%;
+    margin-bottom: 2%;
+    
+
+}
+
+#apresent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+
+#preco{
+    color: #d34343;
+    font-weight:900;
+
+}
+.produtos {
+    font-family: "Arvo";
+    font-weight: 700;
+    font-size: 2.5em;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+}
+#linkinicio{
+    width:50%;
+    justify-content:end;
+}   
+#linkinicio a{
+    margin-left: 2rem;
+}
