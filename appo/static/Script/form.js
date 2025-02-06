@@ -1,4 +1,5 @@
-  const form = document.getElementById('form');
+//forms.js
+ const form = document.getElementById('form');
 
   form.addEventListener('submit', function (event) {
     const username = document.getElementById('username').value.trim();
@@ -9,3 +10,5 @@
       event.preventDefault();
     }
   });
+
+  

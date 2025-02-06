@@ -8,22 +8,22 @@
     <script src="https://kit.fontawesome.com/200bf88688.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Kameron:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Style/style.css">
-    <link rel="stylesheet" href="Style/media.css">
-    <link rel="stylesheet" href="Style/mobile.css">
-    <link rel="stylesheet" href="Style/adm.css">
+    <link rel="stylesheet" href="../static/Style/style.css">
+    <link rel="stylesheet" href="../static/Style/media.css">
+    <link rel="stylesheet" href="../static/Style/mobile.css">
+    <link rel="stylesheet" href="../static/Style/adm.css">
     <title id="titulo">Bombons Dadá</title>
-    <link rel="icon" href="Imagens/icone2.webp">
+    <link rel="icon" href="../static/Imagens/icone2.webp">
 </head>
 <body>
     <header>
         <nav>
             <div>
-                <img src="Imagens/icone2.webp" id="logo-header">
+                <img src="../static/Imagens/icone2.webp" id="logo-header">
                 <h1>Bombons Dadá</h1>
             </div>
             <div id="linkinicio">
-                <a>Perfil Administrador</a>
+                <a href="{{ url_for('logout') }}">Sair</a>
 
             </div>
         </nav>
@@ -51,7 +51,7 @@
         
         <div id="apresent">
             <div class="divbombo" id="divbomboadm">
-                <img src="Imagens/fotobombo.jpg" >
+                <img src="../static/Imagens/fotobombo.jpg" >
                 <div id="nome">
                     <p>Bombom de Ninho com Geleia de Morango</p>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
             </div>
             <div class="divbombo" id="divbomboadm">
-                <img src="Imagens/fotobombo2.jpg" >
+                <img src="../static/Imagens/fotobombo2.jpg" >
                 <div id="nome">
                     <p>Bombom de Prestígio</p>
                 </div>
@@ -67,7 +67,7 @@
                 <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
             </div>
             <div class="divbombo" id="divbomboadm">
-                <img src="Imagens/fotobombo3.jpg" >
+                <img src="../static/Imagens/fotobombo3.jpg" >
                 <div id="nome">
                     <p>Bombom de Maracujá</p>
                 </div>
@@ -75,13 +75,13 @@
                     <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
             </div>
             <div class="divbombo" id="divbomboadm">
-                <img src="Imagens/fotobombo4.jpg" >
+                <img src="../static/Imagens/fotobombo4.jpg" >
                 <p id="nome">Bombom de Maracujá com Brigadeiro</p>
                 <p id="preco">R$4,50</p>
                 <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
             </div>
             <div class="divbombo" id="divbomboadm">
-                <img src="Imagens/fotobombo5.jpg" >
+                <img src="../static/Imagens/fotobombo5.jpg" >
                 <p id="nome">Bombom de Ovomaltine</p>
                 <p id="preco">R$4,50</p>
                 <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
@@ -97,6 +97,6 @@
     <footer>
 
     </footer>
-    <script src="Script/cadastro.js"></script>
+    <script src="../static/Script/cadastro.js"></script>
 </body>
 </html>

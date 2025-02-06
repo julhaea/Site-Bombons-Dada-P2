@@ -1,3 +1,4 @@
+//cadastro.js
 var popup = document.getElementById("idpopup");
         var btn = document.getElementById("opencadastrar");
         var span = document.getElementsByClassName("fechar")[0];

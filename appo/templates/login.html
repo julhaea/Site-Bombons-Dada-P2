@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/200bf88688.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Kameron:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/Style/style.css">
+    <link rel="stylesheet" href="../static/Style/media.css">
+    <link rel="stylesheet" href="../static/Style/mobile.css">
+    <link rel="stylesheet" href="../static/Style/adm.css">
+    <title id="titulo">Bombons Dadá</title>
+    <link rel="icon" href="../static/Imagens/icone2.webp">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div>
+                <img src="../static/Imagens/icone2.webp" id="logo-header">
+                <h1>Bombons Dadá</h1>
+            </div>
+            <div id="linkinicio">
+                <a href="#bombom">Login Administrador</a>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+            <section id="admin-login">
+              <form id="form" method="POST" action="{{url_for('login')}}">
+                {{ form.hidden_tag() }}
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu usuário">
+                
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha">
+                
+                <div class="botlogin"><button type="submit">Entrar</button>
+                    <a href="{{url_for('cadastro')}}">Cadastrar administrador</a></div>
+              </form>
+            </section>
+          
+        <script src="../static/Script/form.js"></script>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

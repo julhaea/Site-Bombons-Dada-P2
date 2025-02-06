@@ -1,3 +1,4 @@
+
 /* cores */
 .principal {
     color: #E5DA4A;
@@ -419,4 +420,20 @@ footer{
 }   
 #linkinicio a{
     margin-left: 2rem;
+}
+.botlogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botlogin a{
+    padding:3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4d3c35;
+    text-decoration: none;
+
+}
+.botlogin a:hover{
+    color: #5d3a2ba0;
 }

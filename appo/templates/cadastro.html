@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +9,19 @@
     <script src="https://kit.fontawesome.com/200bf88688.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Kameron:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Style/style.css">
-    <link rel="stylesheet" href="Style/media.css">
-    <link rel="stylesheet" href="Style/mobile.css">
-    <link rel="stylesheet" href="Style/adm.css">
+    <link rel="stylesheet" href="../static/Style/style.css">
+    <link rel="stylesheet" href="../static/Style/media.css">
+    <link rel="stylesheet" href="../static/Style/mobile.css">
+    <link rel="stylesheet" href="../static/Style/adm.css">
     <title id="titulo">Bombons Dadá</title>
-    <link rel="icon" href="Imagens/icone2.webp">
+    <link rel="icon" href="../static/Imagens/icone2.webp">
 </head>
 <body>
+    
     <header>
         <nav>
             <div>
-                <img src="Imagens/icone2.webp" id="logo-header">
+                <img src="../static/Imagens/icone2.webp" id="logo-header">
                 <h1>Bombons Dadá</h1>
             </div>
             <div id="linkinicio">
@@ -30,18 +32,24 @@
     </header>
     <main>
             <section id="admin-login">
-              <form id="form" action="/admprodutos.html" method="POST">
+              <form id="form" method="POST" action="{{url_for('cadastro')}}">
+                {{ form.hidden_tag() }}
+
+                <label for="codigo">Código</label>
+                <input type="text" id="codigo" name="codigo" placeholder="Digite o código para cadastro">
+
                 <label for="username">Usuário</label>
-                <input type="text" id="username" name="username" placeholder="Digite seu usuário">
+                <input type="text" id="username" name="username" placeholder="Digite o usuário">
                 
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha">
-                
-                <button type="button" onclick="window.location.href='admprodutos.html'" >Entrar</button>
+                <input type="password" id="password" name="password" placeholder="Digite a senha">
+                 
+                <div class="botlogin"><button type="submit">Cadastrar</button></div>
+
               </form>
             </section>
           
-        <script src="Script/form.js"></script>
+        <script src="../static/Script/form.js"></script>
     </main>
     <footer>
 

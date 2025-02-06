@@ -1,3 +1,5 @@
+
+//carrosssel.js
 let currentIndex = 0;
 
 function showSlide(index) {
@@ -41,3 +43,4 @@ function nextSlideG() {
 function prevSlideG() {
     showSlideG(currentIndex - 1);
 }
+

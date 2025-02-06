@@ -1,49 +1,44 @@
-@media (max-width:600px) {
+
+@media (min-width:601px) and (max-width:900px) {
     main{
-        padding:0rem
+        padding:2.5rem
     }
     /*barra de navegação*/
     #logo-header {
-        width:50px;
-        height:50px;
+        width:70px;
+        height:70px;
+        padding-left: 0rem;
+        margin-right:0rem;
     }
     nav h1{
         font-size:1.2em;
-        padding-right:3rem;
-        padding-left: 1rem;
-        padding-top: 0.4rem;
-        margin:0;
     }
     nav a{
-        padding-top: 0.3rem;
-        font-size:0.7em;
-    }
-    #links{
-        width:100%;
-        justify-content: space-evenly;
-        margin-right: 2rem;
+        font-size:0.8em;
+        padding-top: 0.7rem;
     }
     nav div{
-        display: flex;
-        justify-content: center;
         padding-right:0rem;
-        
+    }
+    #mg {
+        margin:0.5rem;
     }
     nav{
-        padding-top: 0.4rem;
-        height:fit-content;
-        flex-direction: column;
+        height:4.5rem;
     }
     /* Botao */
     #pedido {
-        width: 12rem;
+        width: 15rem;
         height: 3rem;
-        bottom:2rem;
-        border-width: 0.5rem;
-        font-size: 1.1rem;
+        border-width: 0.6rem;
+        font-size: 1.2rem;
+    }
+
+    .ancora {
+        height: 8vh;
     }
     .bombonsgelatos h2 {
-        font-size: 1.7em;
+        font-size: 2em;
     }
     
     .bombonsgelatos {
@@ -51,49 +46,33 @@
     }
     
     .bombonsgelatos h3 {
-        font-size: 1.1rem;
-        padding-left: 1rem;
+        font-size: 1.2rem;
+        padding-left: 2.5rem;
     }
     
     .bombonsgelatos li {
-        font-size: 01rem;
+        font-size: 1rem;
         padding: 0.5rem;
-        padding-left:1rem
+        padding-left:2.5rem
     }
     
     #Gelatos, #Bombons {
         flex-direction: column;
-        width:100%;
     }
     
     .Gelatosdiv, .Bombonsdiv {
-        width: 90%;
+        width: 85%;
         height: fit-content;
     }
-
-    .preco {
-        margin-top: 2rem;
-        height: 2rem;
-        width: 6rem;
-        font-size: 1.4rem;
-        margin-left: 1.8rem;
-    }
-    
     #divcarrossel{
         border-bottom-left-radius: 0%;
         border-bottom-right-radius: 0%;
-        padding-top: 1rem;
-        padding-left: 0;
-        padding-right: 0;
-
+        padding-top: 2rem;
     }
     #lista{
         border-top-left-radius: 0%;
         border-top-right-radius: 0%;
         justify-content: left;
-        padding-left: 0%;
-        padding-right: 0;
-        padding-top: 0;
     }
     .preco{
         margin-left:0.5rem
@@ -104,22 +83,22 @@
     }
 
     .quadro {
-        width: 100%;
+        width: 95%;
         margin:auto;
         border-radius: 0.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .quadro article {
-        padding: 1.5rem;
+        padding: 2rem;
     }
 
     .encomendas h2 {
-        font-size: 1.9rem;
+        font-size: 2rem;
     }
 
     .encomendas h3 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .encomendas h4 {
@@ -130,28 +109,28 @@
         font-size: 1rem;
     }
     .encomendas p{
-        padding:0.4rem;
-        font-size: 0.9rem;
+        padding:0.7rem;
+        font-size: 1rem;
         text-align: center;
     }
     /* Contatos */
     .contato h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         padding-left: 3%;
     }
 
     .contato div {
         display: flex;
-        width: 100%;
-        margin: 1%;
+        font-size: 1rem;
+        width: 30%;
+        margin-left: 3%;
         align-items: center;
-        padding-bottom: 0rem;
+        padding-bottom: 4rem;
     }
 
 
     .contato article {
         display: flex;
-        flex-direction: column;
         justify-content: space-evenly;
     }
 
@@ -161,19 +140,15 @@
         text-decoration: none;
         font-size: 1rem;
         padding-left: 1rem;
-        
-    }
-    #ptel{
-        margin: 0rem;
     }
     .contato a:hover{
         color:#4d3c35ca;
     }
     #icon {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     #icon2{
-        font-size: 1.6rem;
+        font-size: 1.8;
     }
     /*rodape*/
     footer{
@@ -200,4 +175,6 @@
         padding-top: 2em;
         padding-left:0em;
     }
+
 }
+
