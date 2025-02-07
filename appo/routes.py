@@ -14,10 +14,10 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             session['user_id'] = user.id
-            print('Login realizado com sucesso!', 'success')
+            flash('Login realizado com sucesso!', 'success')
             return redirect(url_for('admprodutos'))  # Redireciona para a página de produtos
         else:
-            print('Usuário ou senha incorretos', 'danger')
+            flash('Usuário ou senha incorretos', 'danger')
     return render_template('login.html', form=form)
 
 @app.route('/logout')
@@ -49,6 +49,11 @@ def cadastro():
         CODIGO_ESPERADO = "20122000"
         if codigo != CODIGO_ESPERADO:
             flash('Código de cadastro incorreto!', 'danger')
+            return redirect(url_for('cadastro'))
+        
+        user = User.query.filter_by(username=form.username.data).first()
+        if user:
+            flash('Nome de usuário já existe!', 'danger')
             return redirect(url_for('cadastro'))
 
         hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')

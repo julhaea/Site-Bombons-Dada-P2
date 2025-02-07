@@ -30,6 +30,15 @@
             </div>
         </nav>
     </header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
     <main>
             <section id="admin-login">
               <form id="form" method="POST" action="{{url_for('cadastro')}}">

@@ -11,4 +11,15 @@
     }
   });
 
-  
+// Seleciona todos os elementos com a classe 'alert'
+const alerts = document.querySelectorAll('.alert');
+
+// Define o tempo de exibição do alerta (em milissegundos)
+const alertTimeout = 5000; // 5 segundos
+
+// Itera sobre cada alerta e remove após o tempo definido
+alerts.forEach(alert => {
+    setTimeout(() => {
+        alert.remove(); // Remove o alerta do DOM
+    }, alertTimeout);
+});
