@@ -37,75 +37,27 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-    <div id="idpopup" class="popup">
-        <div class="divpopup">
-            <span class="fechar">&times;</span>
-            <h2>Cadastro de Produto</h2>
-            <form class=cadastro id="product-form" action="/submit-product" method="POST" enctype="multipart/form-data">
-                <label  for="nome-produto">Nome do Produto</label>
-                <input type="text" id="nome-produto" name="nome-produto" placeholder="Bombom de Ninho" required>
-
-                <label for="preco-produto">Preço (R$)</label>
-                <input type="number" id="preco-produto" name="preco-produto" placeholder="4,50 " required>
-
-                <label for="foto-produto">Imagem do Produto</label>
-                <input type="file" id="foto-produto" name="foto-produto" accept="image/*" required>
-
-                <button type="submit">Cadastrar Produto</button>
-            </form>
-        </div>
-    </div>
     <div class="ancora"></div>
-    <main class="produtos"> 
-        
+    <main class="produtos">
         <div id="apresent">
-            <div class="divbombo" id="divbomboadm">
-                <img src="../static/Imagens/fotobombo.jpg" >
-                <div id="nome">
-                    <p>Bombom de Ninho com Geleia de Morango</p>
+            {% for produto in dadosprodutos %}
+                <div class="divbombo">
+                    <img src="{{ url_for ('uploaded_file', filename=produto.image) }}" alt="{{ produto.name }}">
+                    <div id="nome">
+                        <p>{{ produto.name }}</p>
+                    </div>
+                    <p id="preco">R${{ produto.price }}</p>
                 </div>
-                <p id="preco">R$4,50</p>
-                <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
-            </div>
-            <div class="divbombo" id="divbomboadm">
-                <img src="../static/Imagens/fotobombo2.jpg" >
-                <div id="nome">
-                    <p>Bombom de Prestígio</p>
-                </div>
-                <p id="preco">R$4,50</p>
-                <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
-            </div>
-            <div class="divbombo" id="divbomboadm">
-                <img src="../static/Imagens/fotobombo3.jpg" >
-                <div id="nome">
-                    <p>Bombom de Maracujá</p>
-                </div>
-                    <p id="preco">R$4,50</p>
-                    <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
-            </div>
-            <div class="divbombo" id="divbomboadm">
-                <img src="../static/Imagens/fotobombo4.jpg" >
-                <p id="nome">Bombom de Maracujá com Brigadeiro</p>
-                <p id="preco">R$4,50</p>
-                <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
-            </div>
-            <div class="divbombo" id="divbomboadm">
-                <img src="../static/Imagens/fotobombo5.jpg" >
-                <p id="nome">Bombom de Ovomaltine</p>
-                <p id="preco">R$4,50</p>
-                <div class="icones"><i class="fa-solid fa-pencil" id="lapis"></i><i class="fa-solid fa-trash" id="lixo"></i></div>
-            </div>
-
+            {% endfor %}
         </div>
     
-    <button id="opencadastrar">Adicionar produto</button>
+    <a href="{{url_for('cadastrar_produto')}}" id="paracadastrar">Adicionar produto</a>
     
-
+    <script src="../static/Script/form.js"></script>
 </main>
  
     <footer>
 
     </footer>
-    <script src="../static/Script/cadastro.js"></script>
 </body>
 </html>

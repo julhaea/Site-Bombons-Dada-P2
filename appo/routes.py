@@ -1,7 +1,15 @@
-from flask import render_template, request, redirect, url_for, session, flash
+from flask import render_template, request, redirect, url_for, session, flash, send_from_directory
 from appo import app, db, bcrypt
-from appo.forms import LoginForm, CadastroForm
-from appo.models import User
+from appo.forms import LoginForm, CadastroForm, ProdutoForm
+from appo.models import User, Produto
+import os
+
+
+# Caminho para a pasta de uploads
+UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
+
+
+
 
 @app.route('/')
 def home():
@@ -28,14 +36,19 @@ def logout():
 
 @app.route('/admprodutos')
 def admprodutos():
+    form=ProdutoForm
     if 'user_id' not in session:
         flash('Faça login para acessar esta página', 'warning')
         return redirect(url_for('login'))
-    return render_template('admprodutos.html')
+    
+    dadosprodutos = Produto.query.all()  # Busca todos os produtos no banco de dados
+    return render_template('admprodutos.html', form=form, dadosprodutos=dadosprodutos)
+    
 
 @app.route('/produtos')
 def produtos():
-    return render_template('produtos.html')
+    dadosprodutos = Produto.query.all()  # Busca todos os produtos no banco de dados
+    return render_template('produtos.html', dadosprodutos=dadosprodutos)
 
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
@@ -65,3 +78,51 @@ def cadastro():
         return redirect(url_for('login'))
 
     return render_template('cadastro.html', form=form)
+
+# Rota para cadastrar um novo produto
+@app.route('/cadastrar-produto', methods=['GET', 'POST'])
+def cadastrar_produto():
+    if 'user_id' not in session:
+        flash('Faça login para acessar esta página', 'warning')
+        return redirect(url_for('login'))
+    
+    form = ProdutoForm()
+    if form.validate_on_submit():
+        if 'image' not in request.files:
+            flash('Nenhum arquivo enviado', 'danger')
+            return redirect(request.url)
+        
+        file = request.files['image']
+
+        if file.filename == '':
+            flash('Nenhum arquivo selecionado', 'danger')
+            return redirect(request.url)
+        
+        if file and file.filename:
+            filename = file.filename
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            
+            os.makedirs(os.path.dirname(file_path), exist_ok=True)
+            
+            
+            file.save(file_path)
+
+            new_product = Produto(
+                name=form.name.data,
+                price=form.price.data,
+                image=filename
+            )
+            db.session.add(new_product)
+            db.session.commit()
+
+            flash('Produto cadastrado com sucesso!', 'success')
+            return redirect(url_for('admprodutos'))
+        else:
+            flash('Extensão de arquivo não permitida', 'danger')
+            return redirect(request.url)
+
+    return render_template('cadastrar_produto.html', form=form)
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(UPLOAD_FOLDER, filename)

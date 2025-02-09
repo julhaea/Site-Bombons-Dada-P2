@@ -91,19 +91,6 @@
     z-index:7
 }
 
-
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 50px;
-}
-
 .divpopup {
     background-color: white;
     margin: auto;
@@ -115,19 +102,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.fechar {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.fechar:hover{
-    color:#d34343;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 /* Estilo para o formulário */
 .cadastro {
@@ -161,3 +135,33 @@
 .cadastro button:hover {
     background-color: #b04562;
 }
+
+
+#paracadastrar {
+    position: fixed;
+    width: 18rem;
+    height: 4rem;
+    right: 2rem;
+    bottom: 6rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #d34343;
+    background-color: #E5DA4A;
+    border-width: 0.7rem;
+    font-family: "Arvo", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4d3c35;
+    z-index:7;
+    text-align: center;
+    text-decoration: none;
+    align-content: center;
+
+    
+
+}
+
+#paracadastrar:hover {
+    background-color: #d5c814;
+}
+

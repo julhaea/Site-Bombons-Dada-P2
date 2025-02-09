@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +11,12 @@
     <link rel="stylesheet" href="../static/Style/style.css">
     <link rel="stylesheet" href="../static/Style/media.css">
     <link rel="stylesheet" href="../static/Style/mobile.css">
+    <link rel="stylesheet" href="../static/Style/adm.css">
     <title id="titulo">Bombons Dadá</title>
     <link rel="icon" href="../static/Imagens/icone2.webp">
 </head>
 <body>
+    
     <header>
         <nav>
             <div>
@@ -23,30 +24,39 @@
                 <h1>Bombons Dadá</h1>
             </div>
             <div id="linkinicio">
-                <a href="{{ url_for('home') }}" >Início</a>
-                <a href="{{ url_for('login') }}">Login Adm</a>
+                <a href="#bombom">Login Administrador</a>
 
             </div>
         </nav>
     </header>
-    <div class="ancora"></div>
-    <h1 class="produtos">Nossos Produtos</h1>
-    <main class="produtos">
-        <div id="apresent">
-            {% for produto in dadosprodutos %}
-                <div class="divbombo">
-                    <img src="{{ url_for ('uploaded_file', filename=produto.image) }}" alt="{{ produto.name }}">
-                    <div id="nome">
-                        <p>{{ produto.name }}</p>
-                    </div>
-                    <p id="preco">R${{ produto.price }}</p>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
                 </div>
             {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <main>
+        <div id="idpopup" class="popup">
+            <div class="divpopup">
+                <h2>Cadastro de Produto</h2>
+                <form method="POST" enctype="multipart/form-data" id="form">
+                    {{ form.hidden_tag() }}
+                    <label for="name">Nome do Produto</label>
+                    {{ form.name() }}
+                    <label for="price">Preço (R$)</label>
+                    {{ form.price() }}
+                    <label for="image">Imagem do Produto</label>
+                    {{ form.image() }}
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
         </div>
-
+          
+        <script src="../static/Script/form.js"></script>
     </main>
-    <button id="pedido" onclick="window.location.href='https://wa.me/5531991353880';">FAÇA SEU PEDIDO</button>
- 
     <footer>
 
     </footer>
