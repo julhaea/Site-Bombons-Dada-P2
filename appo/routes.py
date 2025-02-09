@@ -126,3 +126,26 @@ def cadastrar_produto():
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(UPLOAD_FOLDER, filename)
+
+
+@app.route('/excluir_produto/<int:produto_id>', methods=['POST'])
+def excluir_produto(produto_id):
+
+    def excluir_image(produto_image):
+        image_path = os.path.join(UPLOAD_FOLDER, produto_image)
+        if os.path.exists(image_path):
+            os.remove(image_path)
+
+    
+    # Buscar o produto no banco
+    produto = Produto.query.get_or_404(produto_id)
+    
+    if produto.image:
+        excluir_image(produto.image)
+    # Excluir o produto
+    db.session.delete(produto)
+    db.session.commit()
+
+    # Redirecionar para a página de listagem
+    flash('Produto excluído com sucesso!', 'success')
+    return redirect(url_for('admprodutos'))

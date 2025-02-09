@@ -39,7 +39,7 @@
                     <div id="nome">
                         <p>{{ produto.name }}</p>
                     </div>
-                    <p id="preco">R${{ produto.price }}</p>
+                    <p id="preco">R${{ "%.2f"|format(produto.price) }}</p>
                 </div>
             {% endfor %}
         </div>

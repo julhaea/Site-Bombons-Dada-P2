@@ -178,3 +178,31 @@
 
 }
 
+/*botao exclusao*/
+
+.delete-form {
+    margin-top: 1rem;
+}
+
+.btn-excluir {
+    background-color: #d34343;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-excluir:hover {
+    background-color: #b52e2e;
+}
+
+.btn-excluir i {
+    font-size: 1.2rem;
+}

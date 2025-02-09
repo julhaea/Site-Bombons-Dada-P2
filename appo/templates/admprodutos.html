@@ -46,7 +46,13 @@
                     <div id="nome">
                         <p>{{ produto.name }}</p>
                     </div>
-                    <p id="preco">R${{ produto.price }}</p>
+                    <p id="preco">R${{ "%.2f"|format(produto.price) }}</p>
+                    <form action="{{ url_for('excluir_produto', produto_id=produto.id) }}" method="POST" class="delete-form">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <button type="button" class="btn-excluir" data-produto-id="{{ produto.id }}" data-produto-name="{{ produto.name }}">
+                            <i class="fa-solid fa-trash"></i> Excluir
+                        </button>
+                    </form>
                 </div>
             {% endfor %}
         </div>
@@ -59,5 +65,14 @@
     <footer>
 
     </footer>
+    <div id="popupconfirma" class="popup">
+        <div class="conteudopopup">
+            <p id="popup-p">Tem certeza de que deseja excluir este produto?</p>
+            <div class="popup-btn">
+                <button id="confirmaexc" class="btn-confirma">Sim</button>
+                <button id="cancelaexc" class="btn-cancela">Não</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

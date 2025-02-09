@@ -21,3 +21,37 @@ alerts.forEach(alert => {
         alert.remove();
     }, alertTimeout);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('popupconfirma');
+  const confirmButton = document.getElementById('confirmaexc');
+  const cancelButton = document.getElementById('cancelaexc');
+  const modalMessage = document.getElementById('popup-p');
+
+  let deleteForm;
+
+  document.querySelectorAll('.btn-excluir').forEach(button => {
+      button.addEventListener('click', (event) => {
+          event.preventDefault(); // Impede o comportamento padrão do botão
+
+          modal.style.display = 'flex';
+
+          const productName = button.getAttribute('data-produto-name');
+          modalMessage.textContent = `Tem certeza de que deseja excluir o produto "${productName}"?`;
+
+          
+          deleteForm = button.closest('form');
+      });
+  });
+
+  confirmButton.addEventListener('click', () => {
+      if (deleteForm) {
+          deleteForm.submit(); // Manda o form e fecha
+      }
+      modal.style.display = 'none';
+  });
+
+  cancelButton.addEventListener('click', () => {
+      modal.style.display = 'none'; // Fecha sem excluir
+  });
+});
