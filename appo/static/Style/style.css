@@ -375,21 +375,22 @@ footer{
 
 }
 #nome{
-  height: 5vw;
-  align-items: center;
-  display:flex;
-  margin-top: 1vw;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    margin: 1vw;
+
 }
 .divbombo{
     width:27%;
-    height: 25vw;
+    height: 100%;
     background-color: #d1e4f2;
     border-radius: 20px;
     display:flex;
     align-items: center;
     flex-direction: column;
     padding:2%;
-    margin-bottom: 2%;
     
 
 }
@@ -400,11 +401,13 @@ footer{
     justify-content: space-evenly;
     height: fit-content;
     flex-wrap: wrap;
+
 }
 
 #preco{
     color: #d34343;
     font-weight:900;
+    height: 2rem;
 
 }
 .produtos {
@@ -425,6 +428,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 .botlogin a{
     padding:3rem;

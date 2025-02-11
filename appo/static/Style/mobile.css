@@ -19,7 +19,7 @@
         padding-top: 0.3rem;
         font-size:0.7em;
     }
-    #links{
+    #links, #linkin{
         width:100%;
         justify-content: space-evenly;
         margin-right: 2rem;
@@ -201,5 +201,39 @@
         padding-top: 2em;
         padding-left:0em;
     }
+    .produtos {
+        font-size: 1.5em; /* Reduzir o tamanho da fonte */
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    #apresent {
+        display: flex;
+        flex-direction: column; /* Colocar os itens em uma coluna */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .divbombo {
+        width: 90%; /* Aumentar a largura para aproveitar melhor o espaço */
+        height: fit-content;
+        margin-bottom: 1rem;
+    }
+
+    .divbombo img {
+        width: 80%; /* A imagem ocupará 100% da largura disponível */
+    }
+
+    #preco {
+        font-size: 1.2rem; /* Ajustar o tamanho do preço */
+    }
+
+    #titulologin{
+        padding-top: 4rem;
+    }
+    #form button{
+        font-size: 1.0rem;
+    }
 }
+
 

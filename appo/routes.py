@@ -32,7 +32,7 @@ def login():
 def logout():
     session.pop('user_id', None)
     flash('Você saiu da conta', 'info')
-    return redirect(url_for('login'))
+    return redirect(url_for('produtos'))
 
 @app.route('/admprodutos')
 def admprodutos():

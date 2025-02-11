@@ -175,34 +175,56 @@
         padding-top: 2em;
         padding-left:0em;
     }
+    .produtos {
+        font-size: 2em; /* Diminuir o tamanho da fonte */
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+    }
 
+    #nome{
+        height: 5rem;
+    }
+
+    #apresent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .divbombo {
+        width: 45%; /* Reduzir a largura dos itens */
+        height: fit-content;
+        margin-bottom: 1.5rem;
+    }
+
+    .divbombo img {
+        width: 80%; /* Ajustar o tamanho da imagem */
+
+    }
+
+    #preco {
+        font-size: 1.5rem; /* Ajustar o tamanho do preço */
+        height: fit-content;
+    }
+    #form button{
+        font-size:1.3rem;
+    }
 }
 
-/*botao exclusao*/
 
-.delete-form {
-    margin-top: 1rem;
-}
 
-.btn-excluir {
-    background-color: #d34343;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s ease;
-}
+@media (min-width:900px) and (max-width:1150px) {
 
-.btn-excluir:hover {
-    background-color: #b52e2e;
-}
+    #nome{
+        height:6rem;
+    }
 
-.btn-excluir i {
-    font-size: 1.2rem;
+    #linkinicio{
+        width:40%;
+    }
+
+    nav h1{
+        font-size: 2.2rem;
+    }
 }

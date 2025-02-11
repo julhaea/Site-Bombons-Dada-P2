@@ -2,7 +2,7 @@
 
 #admin-login{
     height:100vw;
-    margin-top:5rem;
+    margin-top:3rem;
 }
 #form {
     display:flex;
@@ -28,7 +28,7 @@
 }
 #form button{
     width:71%;
-    height: 3vw;
+    height: fit-content;
     align-self:center;
     margin-top: 3vw;
     background-color: #d5c814;
@@ -36,6 +36,7 @@
     font-size: 1.5rem;
     font-weight: bolder;
     color:#594A44;
+    padding: 0.5rem;
     
 }
 #form button:hover{
@@ -221,4 +222,37 @@
 
 .btn-cancela:hover {
     background-color: #539acc;
+}
+/*botao exclusao*/
+
+.delete-form {
+    margin-top: 1rem;
+}
+
+.btn-excluir {
+    background-color: #d34343;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-excluir:hover {
+    background-color: #b52e2e;
+}
+
+.btn-excluir i {
+    font-size: 1.2rem;
+}
+
+#titulologin{
+    font-size: 1.7rem;
+    margin-top: 3rem;
 }
