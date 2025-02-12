@@ -228,28 +228,39 @@
 .delete-form {
     margin-top: 1rem;
 }
+/* Container para os botões */
+.botoes-acoes {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 10px;
+}
+
+/* Estilo dos formulários */
+.edit-form, .delete-form {
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilo dos botões */
+.btn-editar, .btn-excluir {
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
 
 .btn-excluir {
-    background-color: #d34343;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s ease;
+    background-color: #dc3545; /* Vermelho */
 }
 
-.btn-excluir:hover {
-    background-color: #b52e2e;
-}
-
-.btn-excluir i {
-    font-size: 1.2rem;
+.btn-editar:hover, .btn-excluir:hover {
+    opacity: 0.8;
 }
 
 #titulologin{

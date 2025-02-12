@@ -149,3 +149,22 @@ def excluir_produto(produto_id):
     # Redirecionar para a página de listagem
     flash('Produto excluído com sucesso!', 'success')
     return redirect(url_for('admprodutos'))
+
+@app.route('/editar-produto/<int:id>', methods=['GET', 'POST'])
+def editar_produto(id):
+    if 'user_id' not in session:  # Verifica se o usuário está logado
+        flash('Faça login para acessar esta página', 'warning')
+        return redirect(url_for('login'))
+    
+    produto = Produto.query.get_or_404(id)  # Busca o produto pelo ID
+    form = ProdutoForm(obj=produto)  # Preenche o formulário com os dados do produto
+
+    if form.validate_on_submit():
+        produto.name = form.name.data
+        produto.price = form.price.data
+
+        db.session.commit()  # Salva as alterações no banco de dados
+        flash('Produto atualizado com sucesso!', 'success')
+        return redirect(url_for('admprodutos'))
+
+    return render_template('editar_produto.html', form=form, produto=produto)

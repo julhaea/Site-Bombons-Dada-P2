@@ -19,7 +19,7 @@
         padding-top: 0.3rem;
         font-size:0.7em;
     }
-    #links, #linkin{
+    #links, #linkinicio{
         width:100%;
         justify-content: space-evenly;
         margin-right: 2rem;
@@ -233,6 +233,9 @@
     }
     #form button{
         font-size: 1.0rem;
+    }
+    .divcadastroprodutos{
+        margin-top: 6rem;
     }
 }
 

@@ -42,17 +42,26 @@
         <div id="apresent">
             {% for produto in dadosprodutos %}
                 <div class="divbombo">
-                    <img src="{{ url_for ('uploaded_file', filename=produto.image) }}" alt="{{ produto.name }}">
+                    <img src="{{ url_for('uploaded_file', filename=produto.image) }}" alt="{{ produto.name }}">
                     <div id="nome">
                         <p>{{ produto.name }}</p>
                     </div>
                     <p id="preco">R${{ "%.2f"|format(produto.price) }}</p>
-                    <form action="{{ url_for('excluir_produto', produto_id=produto.id) }}" method="POST" class="delete-form">
-                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                        <button type="button" class="btn-excluir" data-produto-id="{{ produto.id }}" data-produto-name="{{ produto.name }}">
-                            <i class="fa-solid fa-trash"></i> Excluir
-                        </button>
-                    </form>
+                    
+                    <div class="botoes-acoes">
+                        <form action="{{ url_for('editar_produto', id=produto.id) }}" method="GET" class="edit-form">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="btn-editar">
+                                <i class="fa-solid fa-pencil"></i> Editar
+                            </button>
+                        </form>
+                        <form action="{{ url_for('excluir_produto', produto_id=produto.id) }}" method="POST" class="delete-form">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="button" class="btn-excluir" data-produto-id="{{ produto.id }}" data-produto-name="{{ produto.name }}">
+                                <i class="fa-solid fa-trash"></i> Excluir
+                            </button>
+                        </form>
+                    </div>
                 </div>
             {% endfor %}
         </div>
